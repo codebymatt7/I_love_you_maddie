@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Note Generator for Maddie</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #ffe4e1;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .love-note-container {
+            background: #ffb6c1;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+        h1 {
+            color: #d2691e;
+        }
+        .love-note {
+            font-size: 18px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #d2691e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background-color: #a0522d;
+        }
+    </style>
+</head>
+<body>
+    <div class="love-note-container">
+        <h1>Love Note for Maddie</h1>
+        <div class="love-note" id="love-note">
+            <!-- Love note will be displayed here -->
+        </div>
+        <button class="button" onclick="generateLoveNote()">Generate New Love Note</button>
+    </div>
+
+    <script>
+        // Array of phrases to create a huge variety of unique love notes for Maddie
+        const phrases = [
+            // Beauty
+            "Maddie, you are breathtakingly beautiful, inside and out.",
+            "Every time I see your smile, it feels like the first time, mesmerizing and enchanting.",
+            "Your eyes, your smile, your presence — everything about you is simply stunning.",
+            "You have a beauty that takes my breath away every single day.",
+            "The way you carry yourself, with grace and elegance, is truly captivating.",
+            "I can’t get over how gorgeous you are — in every sense of the word.",
+
+            // Loving and Understanding
+            "Maddie, your loving heart makes the world a brighter place.",
+            "You have a rare, beautiful ability to love deeply and unconditionally.",
+            "You’re the most understanding person I know, always ready to listen and empathize.",
+            "I feel so lucky to have someone as caring and thoughtful as you in my life.",
+            "Your love is a gift I never take for granted, a light that brightens my days.",
+            "You always know just what to say and do to make everything better.",
+
+            // Intelligence and Passion
+            "Your brilliance never ceases to amaze me, Maddie. You are so smart and capable.",
+            "Talking to you is always an enlightening experience. You are so knowledgeable and wise.",
+            "Your intelligence is as captivating as your beauty.",
+            "You approach life with a passion and enthusiasm that is inspiring.",
+            "Your determination and focus in everything you do show how driven and passionate you are.",
+            "You think with such clarity and vision — it’s like seeing the world through a beautiful lens.",
+
+            // Leadership and Strength
+            "You are a true leader, Maddie — guiding and inspiring others with strength and grace.",
+            "People naturally gravitate towards your wisdom and courage. You lead by example.",
+            "Your leadership skills are one of the many qualities that make you so special.",
+            "The way you step up and take charge when it’s needed shows how strong and confident you are.",
+            "You have a quiet power that commands respect and admiration.",
+            "You’re not just a leader, Maddie — you’re a beacon of light for everyone around you.",
+
+            // Impact and Love
+            "You’ve introduced me to a love that I never knew existed before you came into my life.",
+            "I didn’t truly understand what love was until you showed me.",
+            "You taught me what it means to love deeply and to cherish every moment.",
+            "Being with you has redefined what love means to me — it’s pure, beautiful, and unconditional.",
+            "You opened my heart in ways I never thought possible, and for that, I’ll always be grateful.",
+            "You have made me a better person, teaching me how to love without holding back.",
+
+            // Unique Personality
+            "Your laughter is like music to my ears — a sound I can never get enough of.",
+            "You have a way of making everything around you feel brighter and more alive.",
+            "Your energy, your spirit, your very being — everything about you is one of a kind.",
+            "Your presence is like a ray of sunshine, filling every room with warmth and happiness.",
+            "The way you see the world, with such optimism and hope, is absolutely inspiring.",
+            "Maddie, you have a magic about you that makes life feel full of endless possibilities.",
+
+            // Admiration and Affection
+            "There’s no one in the world like you, Maddie. You’re truly one in a million.",
+            "You inspire me every single day to be the best version of myself.",
+            "The way you live your life — with love, purpose, and passion — makes me admire you endlessly.",
+            "You are my muse, my source of joy, and the reason I believe in the beauty of love.",
+            "You make me feel more alive, more understood, and more loved than ever before.",
+            "Every moment with you is a moment I cherish deeply, a memory I’ll hold forever."
+        ];
+
+        // Function to generate and display a random love note
+        function generateLoveNote() {
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            const loveNote = phrases[randomIndex];
+            document.getElementById('love-note').textContent = loveNote;
+        }
+
+        // Generate a love note when the page loads
+        window.onload = generateLoveNote;
+    </script>
+</body>
+</html>
